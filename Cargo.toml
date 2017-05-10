@@ -1,0 +1,13 @@
+[package]
+name = "chariot_palette"
+description = "A library for reading/writing JASC palettes"
+license = "MIT"
+version = "0.1.5"
+keywords = ["jasc", "palette"]
+authors = ["Kevin Fuller <angered.ghandi@gmail.com>"]
+documentation = "https://docs.rs/chariot_palette/"
+repository = "https://github.com/ChariotEngine/Palette"
+readme = "README.md"
+
+[dependencies]
+error-chain = "0.5"
