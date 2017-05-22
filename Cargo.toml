@@ -11,3 +11,11 @@ readme = "README.md"
 
 [dependencies]
 error-chain = "0.5"
+libc = { version = "0.2", optional = true }
+
+[features]
+chariot_palette_ffi = ["libc"]
+
+[lib]
+crate-type = ["cdylib"]
+name = "chariot_palette"

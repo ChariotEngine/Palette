@@ -28,6 +28,9 @@ extern crate error_chain;
 mod error;
 mod palette;
 
+#[cfg(feature="chariot_palette_ffi")]
+pub mod ffi;
+
 pub use error::{ChainErr, Error, ErrorKind, Result};
 
 pub use palette::Palette;
