@@ -58,8 +58,7 @@ pub fn read_from<R: BufRead + Seek>(file: &mut R) -> Result<Palette> {
     let mut line_index = 0;
     for line_result in file.lines() {
         let line = try!(line_result);
-        if line_index == 0 && line != "JASC-PAL" || line_index == 1 && line != "0100" ||
-           line_index == 2 && line != "256" {
+        if line_index == 0 && line != "JASC-PAL" || line_index == 1 && line != "0100" {
             return Err(ErrorKind::InvalidPalette("bad header").into());
         }
         if line_index > 2 {
